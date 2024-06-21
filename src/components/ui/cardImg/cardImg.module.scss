@@ -1,0 +1,10 @@
+.card {
+  display: inline-flex;
+  gap: 10px;
+
+  width: max-content;
+  padding: 10px 24px;
+
+  background-color: var(--color-dark-900);
+  border-bottom: 1px solid var(--color-dark-500);
+}
