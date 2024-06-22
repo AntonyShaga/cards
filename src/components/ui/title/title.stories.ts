@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { User } from './'
+import { Title } from './'
 
 const meta = {
   argTypes: {
@@ -9,15 +9,15 @@ const meta = {
       //options: ['eye', 'regular', 'serch'],
     },
   },
-  component: User,
+  component: Title,
   tags: ['autodocs'],
-  title: 'Components/UI/User',
-} satisfies Meta<typeof User>
+  title: 'Components/UI/Title',
+} satisfies Meta<typeof Title>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const UserStory: Story = {
+export const TitleStory: Story = {
   args: {
     som: '',
   },

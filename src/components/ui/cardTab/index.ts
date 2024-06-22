@@ -1,1 +1,1 @@
-export * from './cardIcon'
+export * from './cardTab'

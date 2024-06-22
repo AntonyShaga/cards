@@ -1,6 +1,37 @@
-.card {
-  display: inline-flex;
+.cardButton {
+  all: unset;
+
+  cursor: pointer;
+
+  display: flex;
   gap: 10px;
-  padding: 10px 24px;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  padding: 6px 24px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-light-100);
+
+  background-color: var(--color-dark-500);
+}
+
+.cardTitle {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+
+  width: max-content;
+  padding: 6px 24px;
+
+  background-color: var(--color-dark-900);
   border-bottom: 1px solid var(--color-dark-500);
+}
+
+.fullWidth {
+  width: 100%;
 }

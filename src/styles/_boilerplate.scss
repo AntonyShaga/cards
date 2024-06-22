@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +25,7 @@ option {
   font-style: inherit;
   color: inherit;
 }
-
+input {outline:none; border: none}
 a:visited {
   color: inherit;
 }

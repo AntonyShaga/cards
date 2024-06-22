@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { CardIcon } from './'
+import { CardTab } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +9,10 @@ const meta = {
       options: ['primary', 'secondary'],
     },
   },
-  component: CardIcon,
+  component: CardTab,
   tags: ['autodocs'],
-  title: 'Components/UI/CardIcon',
-} satisfies Meta<typeof CardIcon>
+  title: 'Components/UI/CardTab',
+} satisfies Meta<typeof CardTab>
 
 export default meta
 type Story = StoryObj<typeof meta>

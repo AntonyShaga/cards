@@ -1,56 +1,42 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from './'
+import { Input } from './'
 
 const meta = {
   argTypes: {
-    variant: {
+    value: {
       control: { type: 'radio' },
-      options: ['primary', 'secondary'],
+      options: ['eye', 'regular', 'serch'],
     },
   },
-  component: Button,
+  component: Input,
   tags: ['autodocs'],
-  title: 'Components/UI/Button',
-} satisfies Meta<typeof Button>
+  title: 'Components/UI/Input',
+} satisfies Meta<typeof Input>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const InputRegular: Story = {
   args: {
-    as: 'button',
-    children: 'Primary Button',
     disabled: false,
-    variant: 'primary',
+    value: 'Primary Input',
+    variant: 'regular',
   },
 }
 
-export const Secondary: Story = {
+export const InputEye: Story = {
   args: {
-    as: 'button',
-    children: 'Secondary Button',
     disabled: false,
-    variant: 'secondary',
+    value: 'Primary Input',
+    variant: 'eye',
   },
 }
 
-export const FullWidth: Story = {
+export const InputSearch: Story = {
   args: {
-    as: 'button',
-    children: 'Full Width Primary Button',
     disabled: false,
-    fullWidth: true,
-    variant: 'primary',
-  },
-}
-
-export const AsLink: Story = {
-  args: {
-    as: 'a',
-    children: 'Link that looks like a button',
-    disabled: false,
-    fullWidth: false,
-    variant: 'primary',
+    value: 'Primary Input',
+    variant: 'search',
   },
 }

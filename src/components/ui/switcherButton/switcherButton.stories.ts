@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Title } from './'
+import { SwitcherButton } from './'
 
 const meta = {
   argTypes: {
@@ -9,16 +9,16 @@ const meta = {
       //options: ['eye', 'regular', 'serch'],
     },
   },
-  component: Title,
+  component: SwitcherButton,
   tags: ['autodocs'],
-  title: 'Components/UI/User',
-} satisfies Meta<typeof Title>
+  title: 'Components/UI/SwitcherButton',
+} satisfies Meta<typeof SwitcherButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const UserStory: Story = {
+export const SwitcherButtonStory: Story = {
   args: {
-    som: '',
+    children: 'Switcher',
   },
 }

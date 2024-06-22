@@ -1,54 +1,21 @@
-.button {
-  all: unset;
-
-  cursor: pointer;
-
-  display: flex;
-  gap: 10px;
-  align-items: center;
-
-  box-sizing: border-box;
-  padding: 6px 28px;
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 24px;
-  color: var(--color-light-100);
-
-  border-radius: 2px;
-
-  &:focus-visible {
-    outline: 2px solid var(--color-info-500);
-  }
-}
-
-.primary {
-  background-color: var(--color-accent-500);
-
-  &:hover {
-    background-color: var(--color-accent-300)
-  }
-
-  &:active {
-    background-color: var(--color-accent-700)
-  }
-}
-
-.secondary {
-  background-color: var(--color-dark-300);
-
-  &:hover {
-    background-color: var(--color-dark-100)
-  }
-
-  &:active {
-    background-color: var(--color-dark-500)
-  }
-}
-
-.fullWidth {
+.header {
   display: flex;
   justify-content: center;
-  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-dark-900);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 12px 136px;
+  }
+
+  &__logo {
+    display: flex;
+
+  }
 }

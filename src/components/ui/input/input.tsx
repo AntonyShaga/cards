@@ -1,19 +1,35 @@
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
-import s from './button.module.scss'
+import { CloseOutline } from '@/icon/CloseOutline'
+import { EyeOutline } from '@/icon/EyeOutline'
+import { MaximizeOutline } from '@/icon/MaximizeOutline'
 
-export type ButtonProps<T extends ElementType = 'button'> = {
-  as?: T
-  children: ReactNode
+import s from './input.module.scss'
+
+export type InputProps = {
   className?: string
-  fullWidth?: boolean
-  variant?: 'primary' | 'secondary'
-} & ComponentPropsWithoutRef<T>
+  disabled: boolean
+  value: string
+  variant?: 'eye' | 'regular' | 'search'
+} & ComponentPropsWithoutRef<'input'>
 
-export const Button = <T extends ElementType = 'button'>(props: ButtonProps<T>) => {
-  const { as: Component = 'button', className, fullWidth, variant = 'primary', ...rest } = props
+export const Input = (props: InputProps) => {
+  const { className, disabled, value, variant = 'regular', ...rest } = props
 
   return (
-    <Component className={`${s[variant]} ${fullWidth ? s.fullWidth : ''} ${className}`} {...rest} />
+    <div>
+      <div className={`${s.input__wrapper}`}>
+        {variant === 'search' && <MaximizeOutline />}
+        <input
+          className={s.input}
+          disabled={disabled}
+          onChange={() => {}}
+          type={'text'}
+          {...rest}
+        />
+        {variant === 'eye' && <EyeOutline />}
+        {variant === 'search' && <CloseOutline />}
+      </div>
+    </div>
   )
 }

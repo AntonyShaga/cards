@@ -1,1 +1,1 @@
-export * from './cardTab'
+export * from './cardTabFul'

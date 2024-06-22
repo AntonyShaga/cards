@@ -1,18 +1,17 @@
-import { ComponentPropsWithoutRef } from 'react'
+//import React from 'react';
 
-import s from './user.module.scss'
+import { SwitcherButton } from '@/components/ui/switcherButton'
 
-export type UserProps = {
-  some?: any
-} & ComponentPropsWithoutRef<'img'>
-export const User = () => {
+import s from './title.module.scss'
+
+export const Title = () => {
   return (
-    <div className={s.user}>
-      <p className={s.user__text}>{'Ivan'}</p>
-
-      <div className={s.user__imgWrapper}>
-        <img alt={''} src={''} />
-      </div>
+    <div className={s.title}>
+      <SwitcherButton>{'Switcher'}</SwitcherButton>
+      <SwitcherButton>{'Switcher'}</SwitcherButton>
+      <SwitcherButton>{'Switcher'}</SwitcherButton>
+      <SwitcherButton>{'Switcher'}</SwitcherButton>
+      <SwitcherButton>{'Switcher'}</SwitcherButton>
     </div>
   )
 }

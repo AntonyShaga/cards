@@ -1,22 +1,30 @@
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
-import s from './button.module.scss'
+import { Button } from '@/components/ui/button'
+import { User } from '@/components/ui/user'
+import { Logo } from '@/icon/Logo'
 
-export type ButtonProps<T extends ElementType = 'button'> = {
-  as?: T
-  children: ReactNode
+import s from './header.module.scss'
+
+export type HeaderProps = {
   className?: string
-  fullWidth?: boolean
-  variant?: 'primary' | 'secondary'
-} & ComponentPropsWithoutRef<T>
-
-export const Button = <T extends ElementType = 'button'>(props: ButtonProps<T>) => {
-  const { as: Component = 'button', className, fullWidth, variant = 'primary', ...rest } = props
-
+  variant?: 'headerButtom' | 'headerLogo'
+} & ComponentPropsWithoutRef<'header'>
+export const Header = ({ variant = 'headerLogo' }: HeaderProps) => {
   return (
-    <Component
-      className={`${s[variant]} ${s.button} ${fullWidth ? s.fullWidth : ''} ${className}`}
-      {...rest}
-    />
+    <header className={s.header}>
+      <div className={s.header__wrapper}>
+        <div className={s.header__logo}>
+          <Logo />
+        </div>
+        {variant === 'headerLogo' && <User />}
+
+        {variant === 'headerButtom' && (
+          <div>
+            <Button variant={'secondary'}>{'Sign In'}</Button>
+          </div>
+        )}
+      </div>
+    </header>
   )
 }

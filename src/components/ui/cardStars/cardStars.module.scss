@@ -1,6 +1,17 @@
-.card {
+.cardStar {
   display: inline-flex;
-  gap: 10px;
-  padding: 10px 24px;
+  flex-grow: 1;
+  align-items: center;
+
+  width: max-content;
+  padding: 10px 19px;
+
+  background-color: var(--color-dark-900);
   border-bottom: 1px solid var(--color-dark-500);
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
 }

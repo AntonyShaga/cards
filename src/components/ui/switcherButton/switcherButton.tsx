@@ -1,16 +1,16 @@
-//import React from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react'
 
-import { Button } from '@/components/ui/button'
+import s from './switcherButton.module.scss'
+export type ButtonProps = {
+  children: ReactNode
+  className?: string
+} & ComponentPropsWithoutRef<'button'>
+export const SwitcherButton = (props: ButtonProps) => {
+  const { children } = props
 
-import s from './title.module.scss'
-export const Title = () => {
   return (
-    <div className={s.title}>
-      <Button>{'Switcher'}</Button>
-      <Button>{'Switcher'}</Button>
-      <Button>{'Switcher'}</Button>
-      <Button>{'Switcher'}</Button>
-      <Button>{'Switcher'}</Button>
+    <div>
+      <button className={s.button} type={'button'}>{children}</button>
     </div>
   )
 }

@@ -1,15 +1,21 @@
-import { Edit2 } from '@/icon/Edit-2'
-import PlayCircle from '@/icon/PlayCircle'
-import { Trash } from '@/icon/Trash'
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 
-import s from './cardIcon.module.scss'
+import s from './cardTitle.module.scss'
+export type ButtonProps<T extends ElementType = 'button'> = {
+  as?: T
+  children: ReactNode
+  fullWidth?: boolean
+} & ComponentPropsWithoutRef<T>
+export const CardTitle = <T extends ElementType = 'button'>(props: ButtonProps<T>) => {
+  const { as: Component = 'button', children, fullWidth } = props
 
-export const CardIcon = () => {
   return (
-    <div className={s.card}>
-      <PlayCircle />
-      <Edit2 />
-      <Trash />
-    </div>
+    <Component
+      className={`${Component === 'button' ? s.cardButton : s.cardTitle} ${
+        fullWidth ? s.fullWidth : ''
+      }`}
+    >
+      {children}
+    </Component>
   )
 }

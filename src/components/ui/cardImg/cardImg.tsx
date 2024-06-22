@@ -1,15 +1,18 @@
-import { Edit2 } from '@/icon/Edit-2'
-import PlayCircle from '@/icon/PlayCircle'
-import { Trash } from '@/icon/Trash'
+//import React from 'react'
+import { ReactNode } from 'react'
 
-import s from './cardIcon.module.scss'
+import s from './cardImg.module.scss'
 
-export const CardIcon = () => {
+type Props = {
+  children: ReactNode
+}
+export const CardImg = ({ children }: Props) => {
   return (
     <div className={s.card}>
-      <PlayCircle />
-      <Edit2 />
-      <Trash />
+      <div className={s.card__img}>
+        <img alt={''} src={''} />
+      </div>
+      {children}
     </div>
   )
 }

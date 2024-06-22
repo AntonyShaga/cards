@@ -1,15 +1,21 @@
-import { Edit2 } from '@/icon/Edit-2'
-import PlayCircle from '@/icon/PlayCircle'
-import { Trash } from '@/icon/Trash'
+//import React from 'react'
+import { CardIcon } from '@/components/ui/cardIcon'
+import { CardImg } from '@/components/ui/cardImg'
+import { CardStars } from '@/components/ui/cardStars'
+import { CardTitle } from '@/components/ui/cardTitle'
+import ArrowUp from '@/icon/arrowUp'
 
-import s from './cardIcon.module.scss'
+import s from './cardTab.module.scss'
 
-export const CardIcon = () => {
+export const CardTab = () => {
   return (
     <div className={s.card}>
-      <PlayCircle />
-      <Edit2 />
-      <Trash />
+      <CardTitle>Name</CardTitle>
+      <CardTitle as={'div'}>Name</CardTitle>
+      <CardIcon />
+      <CardStars />
+      <CardImg> Name</CardImg>
+      <CardTitle fullWidth>Name {<ArrowUp />}</CardTitle>
     </div>
   )
 }

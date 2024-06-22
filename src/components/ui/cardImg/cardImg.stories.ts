@@ -1,27 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { CardIcon } from './'
+import { CardImg } from './'
 
 const meta = {
-  argTypes: {
+  /*argTypes: {
     variant: {
       control: { type: 'radio' },
       options: ['primary', 'secondary'],
     },
-  },
-  component: CardIcon,
+  },*/
+  component: CardImg,
   tags: ['autodocs'],
-  title: 'Components/UI/CardIcon',
-} satisfies Meta<typeof CardIcon>
+  title: 'Components/UI/CardImg',
+} satisfies Meta<typeof CardImg>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    as: 'button',
-    children: 'Primary Input',
-    disabled: false,
-    variant: 'primary',
+    children: 'Name',
   },
 }
