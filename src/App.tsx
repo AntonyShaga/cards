@@ -9,7 +9,7 @@ import { Title } from '@/components/ui/title'
 import { User } from '@/components/ui/user'
 import { Edit } from '@/icon/edit/edit'
 import Learn from '@/icon/learn/learn'
-import { LogoOut } from '@/icon/logoOut/logoOut.tsx'
+import { LogoOut } from '@/icon/logoOut/logoOut'
 import { More } from '@/icon/more/more'
 import { Person } from '@/icon/person/person'
 import { Trash } from '@/icon/trash/trash'
@@ -28,13 +28,15 @@ export function App() {
         {<LogoOut />}
         {'Button primary'}
       </Button>
-      <Modal icon={<User variant={'forModal'} />}>
-        {<User variant={'forModal'} />}
+      <Title />
+      <CardTab />
+      <Modal
+        icon={<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forUser'} />}
+      >
+        {<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forModal'} />}
         {<FontIcon icon={<Person />} text={'My Profile'} />}
         {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
       </Modal>
-      <Title />
-      <CardTab />
       <CardTabFul />
     </div>
   )

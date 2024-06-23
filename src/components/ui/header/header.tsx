@@ -17,7 +17,9 @@ export const Header = ({ variant = 'headerLogo' }: HeaderProps) => {
         <div className={s.header__logo}>
           <Logo />
         </div>
-        {variant === 'headerLogo' && <User />}
+        {variant === 'headerLogo' && (
+          <User alt={'as'} email={''} name={'asdasdasdasd'} variant={'forHeader'} />
+        )}
 
         {variant === 'headerButtom' && (
           <div>
