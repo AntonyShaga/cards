@@ -8,8 +8,7 @@ type Props = {
   count?: number
 }
 
-export const CardStars = (props: Props) => {
-  const { count = 5 } = props
+export const CardStars = ({ count = 5 }: Props) => {
   const stars = Array(count).fill(0)
   const initialStarValue = -1
   const [currentItem, setCurrentItem] = useState(initialStarValue)

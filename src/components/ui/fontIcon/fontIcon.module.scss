@@ -1,0 +1,9 @@
+.fontIcon {
+  display: flex;
+  align-items: center;
+
+  &Wrapper {
+    display: inline-flex;
+    gap: 6px;
+  }
+}

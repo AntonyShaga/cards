@@ -1,6 +1,8 @@
-export const LogOutOutline = () => {
+import s from './logoOut.module.scss'
+export const LogoOut = () => {
   return (
     <svg
+      className={s.icon}
       fill={'none'}
       height={'16'}
       viewBox={'0 0 24 24'}

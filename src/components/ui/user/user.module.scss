@@ -5,11 +5,7 @@
   background-color: var(--color-dark-900);
 
   &__text {
-    font-size: var(--font-size-s);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-m);
-    color: var(--color-light-100);
-
+    width: max-content;
     border-bottom: 1px dashed white;
   }
 
@@ -21,6 +17,9 @@
   }
 }
 
-p{
+p {
   margin: 0;
+}
+
+.forModal {
 }

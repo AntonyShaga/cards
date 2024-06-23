@@ -1,7 +1,8 @@
-
+import s from './trash.module.scss'
 export const Trash = () => {
   return (
     <svg
+      className={s.icon}
       fill={'none'}
       height={'16'}
       viewBox={'0 0 24 24'}

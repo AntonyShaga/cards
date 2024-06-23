@@ -27,11 +27,11 @@
   background-color: var(--color-accent-500);
 
   &:hover {
-    background-color: var(--color-accent-300)
+    background-color: var(--color-accent-300);
   }
 
   &:active {
-    background-color: var(--color-accent-700)
+    background-color: var(--color-accent-700);
   }
 }
 
@@ -39,12 +39,19 @@
   background-color: var(--color-dark-300);
 
   &:hover {
-    background-color: var(--color-dark-100)
+    background-color: var(--color-dark-100);
   }
 
   &:active {
-    background-color: var(--color-dark-500)
+    background-color: var(--color-dark-500);
   }
+}
+
+.modal {
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  border-bottom: 1px solid var(--color-dark-500);
 }
 
 .fullWidth {

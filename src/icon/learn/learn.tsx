@@ -1,6 +1,9 @@
-const PlayCircle = () => {
+import s from './learn.module.scss'
+
+const Learn = () => {
   return (
     <svg
+      className={s.icon}
       fill={'none'}
       height={'16'}
       viewBox={'0 0 24 24'}
@@ -30,4 +33,4 @@ const PlayCircle = () => {
   )
 }
 
-export default PlayCircle
+export default Learn

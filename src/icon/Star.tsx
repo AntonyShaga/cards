@@ -1,7 +1,7 @@
 import s from './icon.module.scss'
 
 type Props = {
-  fill: boolean
+  fill?: boolean
 }
 export const Star = ({ fill }: Props) => {
   return (

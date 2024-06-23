@@ -1,6 +1,9 @@
-export const Edit2 = () => {
+import s from './edit.module.scss'
+
+export const Edit = () => {
   return (
     <svg
+      className={s.icon}
       fill={'none'}
       height={'16'}
       viewBox={'0 0 24 24'}

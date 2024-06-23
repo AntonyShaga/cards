@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,7 +24,10 @@ option {
   font-style: inherit;
   color: inherit;
 }
-input {outline:none; border: none}
+input {
+  outline: none;
+  border: none;
+}
 a:visited {
   color: inherit;
 }
@@ -39,4 +41,11 @@ body {
   color: var(--color-light-100);
 
   background-color: var(--color-dark-900);
+}
+li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
 }
