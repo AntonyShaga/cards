@@ -9,11 +9,14 @@
   }
 
   &Email {
-    font-size: 0.9em;
-    color: #666;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-s);
+    color: var(--color-dark-100);
   }
 
   &ImgWrapper {
+    cursor: pointer;
+
     overflow: hidden;
 
     width: 36px;

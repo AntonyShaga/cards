@@ -33,7 +33,15 @@ export function App() {
       <Modal
         icon={<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forUser'} />}
       >
-        {<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forModal'} />}
+        {
+          <User
+            alt={'as'}
+            email={'j&johnson@gmail.com'}
+            name={'Ivanov'}
+            src={''}
+            variant={'forModal'}
+          />
+        }
         {<FontIcon icon={<Person />} text={'My Profile'} />}
         {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
       </Modal>

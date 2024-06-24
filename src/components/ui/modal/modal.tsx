@@ -1,4 +1,6 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
+
+import { useOutsideClick } from '@/hooks'
 
 import s from './modal.module.scss'
 
@@ -7,18 +9,18 @@ type Props = {
   icon: ReactNode
 }
 export const Modal = ({ children, icon }: Props) => {
-  const [visible, setVisible] = useState<boolean>(false)
+  const { isActive, ref, setIsActive } = useOutsideClick(false)
 
   const toggleVisibility = () => {
-    setVisible(prev => !prev)
+    setIsActive(prev => !prev)
   }
 
   return (
-    <div className={s.modal}>
+    <div className={s.modal} ref={ref}>
       <div className={s.modalIcon} onClick={toggleVisibility}>
         {icon}
       </div>
-      {visible && (
+      {isActive && (
         <div className={s.modalWrapper}>
           <ul className={s.modalList}>
             {children.map((el, index) => (
