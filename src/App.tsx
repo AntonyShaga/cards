@@ -1,3 +1,4 @@
+import { AvatarLogo } from '@/components/ui/avtar'
 import { Button } from '@/components/ui/button'
 import { CardTab } from '@/components/ui/cardTab'
 import { CardTabFul } from '@/components/ui/cardTabFul'
@@ -5,6 +6,7 @@ import { FontIcon } from '@/components/ui/fontIcon'
 import { Header } from '@/components/ui/header'
 import { Input } from '@/components/ui/input'
 import { Modal } from '@/components/ui/modal'
+import { NewModal } from '@/components/ui/newModal'
 import { Title } from '@/components/ui/title'
 import { User } from '@/components/ui/user'
 import { Edit } from '@/icon/edit/edit'
@@ -30,7 +32,7 @@ export function App() {
       </Button>
       <Title />
       <CardTab />
-      <Modal
+      {/* <Modal
         icon={<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forUser'} />}
       >
         {
@@ -44,8 +46,23 @@ export function App() {
         }
         {<FontIcon icon={<Person />} text={'My Profile'} />}
         {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
-      </Modal>
+      </Modal>*/}
+      <NewModal icon={<AvatarLogo />}>
+        {
+          <User
+            alt={'as'}
+            email={'j&johnson@gmail.com'}
+            name={'Ivanov'}
+            src={''}
+            variant={'forModal'}
+          />
+        }
+        {<FontIcon icon={<Person />} text={'My Profile'} />}
+        {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
+      </NewModal>
       <CardTabFul />
+      <AvatarLogo />
+      <More />
     </div>
   )
 }
