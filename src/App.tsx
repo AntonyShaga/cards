@@ -5,26 +5,15 @@ import { CardTabFul } from '@/components/ui/cardTabFul'
 import { FontIcon } from '@/components/ui/fontIcon'
 import { Header } from '@/components/ui/header'
 import { Input } from '@/components/ui/input'
-import { Modal } from '@/components/ui/modal'
 import { NewModal } from '@/components/ui/newModal'
 import { Title } from '@/components/ui/title'
-import { User } from '@/components/ui/user'
-import { Edit } from '@/icon/edit/edit'
-import Learn from '@/icon/learn/learn'
 import { LogoOut } from '@/icon/logoOut/logoOut'
-import { More } from '@/icon/more/more'
 import { Person } from '@/icon/person/person'
-import { Trash } from '@/icon/trash/trash'
 
 export function App() {
   return (
     <div>
       <Header />
-      <Modal icon={<More />}>
-        {<FontIcon icon={<Learn />} text={'Learn'} />}
-        {<FontIcon icon={<Edit />} text={'Edit'} />}
-        {<FontIcon icon={<Trash />} text={'Delete'} />}
-      </Modal>
       <Input disabled={false} value={''} variant={'search'} />
       <Button>
         {<LogoOut />}
@@ -32,37 +21,29 @@ export function App() {
       </Button>
       <Title />
       <CardTab />
-      {/* <Modal
-        icon={<User alt={'as'} email={'someEmaill'} name={'Ivanov'} src={''} variant={'forUser'} />}
-      >
-        {
-          <User
-            alt={'as'}
-            email={'j&johnson@gmail.com'}
-            name={'Ivanov'}
-            src={''}
-            variant={'forModal'}
+
+      <NewModal
+        icon={
+          <AvatarLogo
+            src={
+              'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80'
+            }
           />
         }
-        {<FontIcon icon={<Person />} text={'My Profile'} />}
-        {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
-      </Modal>*/}
-      <NewModal icon={<AvatarLogo />}>
+      >
         {
-          <User
-            alt={'as'}
+          <AvatarLogo
             email={'j&johnson@gmail.com'}
-            name={'Ivanov'}
-            src={''}
-            variant={'forModal'}
+            name={'Pedro Duarte'}
+            src={
+              'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80'
+            }
           />
         }
         {<FontIcon icon={<Person />} text={'My Profile'} />}
         {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
       </NewModal>
       <CardTabFul />
-      <AvatarLogo />
-      <More />
     </div>
   )
 }

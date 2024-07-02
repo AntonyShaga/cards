@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef } from 'react'
 
+import { AvatarLogo } from '@/components/ui/avtar'
 import { Button } from '@/components/ui/button'
 import { FontIcon } from '@/components/ui/fontIcon'
-import { Modal } from '@/components/ui/modal'
-import { User } from '@/components/ui/user'
+import { NewModal } from '@/components/ui/newModal'
 import { Logo } from '@/icon/Logo'
 import { LogoOut } from '@/icon/logoOut/logoOut'
 import { Person } from '@/icon/person/person'
@@ -22,29 +22,29 @@ export const Header = ({ variant = 'headerLogo' }: HeaderProps) => {
           <Logo />
         </div>
         {variant === 'headerLogo' && (
-          <Modal
+          <NewModal
             icon={
-              <User
-                alt={'as'}
-                email={'someEmaill'}
-                name={'Ivanov'}
-                src={''}
-                variant={'forHeader'}
+              <AvatarLogo
+                /* email={'j&johnson@gmail.com'}
+                        name={'Pedro Duarte'}*/
+                src={
+                  'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80'
+                }
               />
             }
           >
             {
-              <User
-                alt={'as'}
+              <AvatarLogo
                 email={'j&johnson@gmail.com'}
-                name={'Ivanov'}
-                src={''}
-                variant={'forModal'}
+                name={'Pedro Duarte'}
+                src={
+                  'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80'
+                }
               />
             }
             {<FontIcon icon={<Person />} text={'My Profile'} />}
             {<FontIcon icon={<LogoOut />} text={'Sign Out'} />}
-          </Modal>
+          </NewModal>
         )}
 
         {variant === 'headerButtom' && (

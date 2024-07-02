@@ -22,7 +22,7 @@ export const NewModal = ({ children, icon }: Props) => {
           <button className={s.DropdownMenuIconButton} type={'button'}>
             {icon}
           </button>
-          {visibleName && <div>ghejwklw;a</div>}
+          {visibleName && <div>name</div>}
         </div>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
