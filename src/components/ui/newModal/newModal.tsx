@@ -7,8 +7,9 @@ import s from './newModal.module.scss'
 type Props = {
   children: ReactNode[]
   icon: ReactNode
+  name?: string
 }
-export const NewModal = ({ children, icon }: Props) => {
+export const NewModal = ({ children, icon, name }: Props) => {
   const [visibleName, setvisibleName] = useState(true)
 
   return (
@@ -22,7 +23,7 @@ export const NewModal = ({ children, icon }: Props) => {
           <button className={s.DropdownMenuIconButton} type={'button'}>
             {icon}
           </button>
-          {visibleName && <div>name</div>}
+          {visibleName && name && <div>{name}</div>}
         </div>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>

@@ -1,0 +1,26 @@
+.Checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  background-color: white;
+  border-radius: 100%;
+
+  &Root {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+
+    background-color: inherit;
+    border: 2px solid var(--color-light-900);
+  }
+}
+
+.CheckIcon {
+  color: black;
+}
