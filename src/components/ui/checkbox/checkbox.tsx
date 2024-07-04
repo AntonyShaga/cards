@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { CheckBoxIcon } from '@/icon/checkBoxIcon/checkBoxIcon'
+import { CheckBoxIconRam } from '@/icon/checkBoxIcon/checkBoxIconRam.tsx'
 import * as Checkbox from '@radix-ui/react-checkbox'
 
 import s from './checkbox.module.scss'
@@ -12,7 +13,8 @@ export const CheckBox = () => {
     <div className={s.Checkbox}>
       <Checkbox.Root className={s.CheckboxRoot}>
         <Checkbox.Indicator className={s.ew}>
-          <CheckBoxIcon cheacked={checked} />
+          <CheckBoxIconRam />
+          {/*<CheckBoxIcon />*/}
         </Checkbox.Indicator>
       </Checkbox.Root>
     </div>

@@ -1,15 +1,35 @@
 .Checkbox {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+
+  border-radius: 100%;
+
+  &:hover {
+    background-color: var(--color-dark-100);
+  }
 
   &Root {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     box-sizing: border-box;
-    width: 36px;
-    height: 36px;
+    width: 18px;
+    height: 18px;
     padding: 0;
 
-    border: transparent;
+    background-color: inherit;
+    border: none;
   }
+}
+
+.ew {
+  display: flex;
 }
 
 .CheckIcon {

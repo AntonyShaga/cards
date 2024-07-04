@@ -7,6 +7,7 @@ import { Header } from '@/components/ui/header'
 import { Input } from '@/components/ui/input'
 import { NewModal } from '@/components/ui/newModal'
 import { Title } from '@/components/ui/title'
+import { CheckBoxIconRam } from '@/icon/checkBoxIcon/checkBoxIconRam.tsx'
 import { Edit } from '@/icon/edit/edit'
 import Learn from '@/icon/learn/learn'
 import { LogoOut } from '@/icon/logoOut/logoOut'
@@ -33,6 +34,7 @@ export function App() {
       <CardTabFul />
 
       <CheckBox />
+      <CheckBoxIconRam />
     </div>
   )
 }
