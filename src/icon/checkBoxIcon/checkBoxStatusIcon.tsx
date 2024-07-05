@@ -1,6 +1,11 @@
-export const CheckBoxIconRam = () => {
+import s from './checkBoxIcon.module.scss'
+type Props = {
+  disabled: boolean
+}
+export const CheckBoxStatusIcon = ({ disabled }: Props) => {
   return (
     <svg
+      className={s.icon}
       fill={'none'}
       height={'18'}
       viewBox={'0 0 18 18'}
@@ -11,7 +16,7 @@ export const CheckBoxIconRam = () => {
         d={
           'M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0Z'
         }
-        fill={'#c3c1c7'}
+        fill={disabled ? '#808080 ' : '#c3c1c7'}
       />
     </svg>
   )

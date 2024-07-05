@@ -1,4 +1,4 @@
-.Checkbox {
+.checkbox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10,10 +10,20 @@
   border-radius: 100%;
 
   &:hover {
+    background-color: var(--color-dark-500);
+  }
+
+  &:active {
+    background-color: var(--color-dark-100);
+  }
+
+  &:focus-within {
     background-color: var(--color-dark-100);
   }
 
   &Root {
+    cursor: pointer;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -25,13 +35,10 @@
 
     background-color: inherit;
     border: none;
+    outline: 0;
   }
-}
 
-.ew {
-  display: flex;
-}
-
-.CheckIcon {
-  color: black;
+  &Indicator {
+    display: flex;
+  }
 }

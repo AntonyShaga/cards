@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { CheckBoxIcon } from '@/icon/checkBoxIcon/checkBoxIcon'
-import { CheckBoxIconRam } from '@/icon/checkBoxIcon/checkBoxIconRam'
+import { CheckBoxSelectionIcon } from '@/icon/checkBoxIcon/CheckBoxSelectionIcon.tsx'
+import { CheckBoxStatusIcon } from '@/icon/checkBoxIcon/checkBoxStatusIcon.tsx'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckedState } from '@radix-ui/react-checkbox'
 
@@ -14,11 +14,16 @@ export const CheckBox = () => {
   }
 
   return (
-    <div className={s.Checkbox}>
-      <Checkbox.Root checked={checked} className={s.CheckboxRoot} onCheckedChange={onClickHandler}>
-        <Checkbox.Indicator className={s.ew}>
-          {checked === 'indeterminate' && <CheckBoxIconRam />}
-          {checked === true && <CheckBoxIcon />}
+    <div className={s.checkbox}>
+      <Checkbox.Root
+        checked={checked}
+        className={s.checkboxRoot}
+        disabled={false}
+        onCheckedChange={onClickHandler}
+      >
+        <Checkbox.Indicator className={s.checkboxIndicator}>
+          {checked === 'indeterminate' && <CheckBoxStatusIcon disabled={false} />}
+          {checked === true && <CheckBoxSelectionIcon disabled={false} />}
         </Checkbox.Indicator>
       </Checkbox.Root>
     </div>
