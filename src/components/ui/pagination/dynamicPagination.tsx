@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import usePageNumbers from '@/hooks/usePageNumbers'
+import { usePageNumbers } from '@/components/ui/pagination/hook'
 
 import s from './pagination.module.scss'
 
