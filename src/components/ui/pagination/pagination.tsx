@@ -1,5 +1,7 @@
 import React from 'react'
 
+import usePageNumbers from '@/hooks/usePageNumbers'
+
 import s from './pagination.module.scss'
 
 type PaginationProps = {
@@ -42,69 +44,24 @@ export const Pagination: React.FC<PaginationProps> = ({
     onPageChange(1) // сброс страницы при изменении количества элементов на странице
   }
 
-  const renderPageNumbers = () => {
-    const pageNumbers = []
-    const maxPagesToShow = 5
-    const pagesToShow = maxPagesToShow - 2 // excluding the first and last page
-
-    const startPage = Math.max(2, currentPage - Math.floor(pagesToShow / 2))
-    const endPage = Math.min(totalPages - 1, currentPage + Math.floor(pagesToShow / 2))
-
-    if (startPage > 2) {
-      pageNumbers.push(
-        <span className={s.ellipsis} key={'start-ellipsis'}>
-          ...
-        </span>
-      )
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
-      pageNumbers.push(
-        <button
-          className={`${s.pageButton} ${i === currentPage ? s.active : ''}`}
-          key={i}
-          onClick={() => handlePageChange(i)}
-        >
-          {i}
-        </button>
-      )
-    }
-
-    if (endPage < totalPages - 1) {
-      pageNumbers.push(
-        <span className={s.ellipsis} key={'end-ellipsis'}>
-          ...
-        </span>
-      )
-    }
-
-    return pageNumbers
-  }
+  const pageNumbers = usePageNumbers(totalPages, currentPage, handlePageChange)
 
   return (
     <div className={s.paginationContainer}>
-      <button className={s.pageButton} disabled={currentPage === 1} onClick={handlePreviousPage}>
+      <button
+        className={s.pageButton}
+        disabled={currentPage === 1}
+        onClick={handlePreviousPage}
+        type={'button'}
+      >
         &lt;
       </button>
-      <button
-        className={`${s.pageButton} ${1 === currentPage ? s.active : ''}`}
-        onClick={() => handlePageChange(1)}
-      >
-        1
-      </button>
-      {renderPageNumbers()}
-      {totalPages > 1 && (
-        <button
-          className={`${s.pageButton} ${totalPages === currentPage ? s.active : ''}`}
-          onClick={() => handlePageChange(totalPages)}
-        >
-          {totalPages}
-        </button>
-      )}
+      {pageNumbers}
       <button
         className={s.pageButton}
         disabled={currentPage === totalPages}
         onClick={handleNextPage}
+        type={'button'}
       >
         &gt;
       </button>
