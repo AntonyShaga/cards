@@ -27,7 +27,6 @@ export function App() {
       </Button>
       <Title />
       <CardTab />
-
       <NewModal icon={<More />}>
         <FontIcon icon={<Learn />} text={'Learn'} />
         <FontIcon icon={<Edit />} text={'Edit'} />

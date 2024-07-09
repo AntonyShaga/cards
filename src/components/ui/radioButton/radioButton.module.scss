@@ -57,6 +57,7 @@
     background-color: inherit;
     border: 2px solid var(--color-accent-500);
     border-radius: 100%;
+    outline: none;
 
     &[disabled] .radioIndicator {
       background-color: var(--color-accent-900);
