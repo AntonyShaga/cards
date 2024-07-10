@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
 import { usePageNumbers } from '@/components/ui/pagination/hook'
-import { PaginationButton } from '@/components/ui/pagination/paginationButton'
+import { PageNavigationButton } from '@/components/ui/pagination/pageNavigationButton'
 import { RadixSelect } from '@/components/ui/radixSelect'
+import Arrow from '@/icon/arrow/arrow'
 
 import s from './pagination.module.scss'
 
@@ -38,16 +39,16 @@ export const DynamicPagination: React.FC = () => {
 
   return (
     <div className={s.paginationContainer}>
-      <PaginationButton
+      <PageNavigationButton
         disabled={currentPage === 1}
         handlePaginationButtonClick={handlePreviousPage}
-        icon={''}
+        icon={<Arrow direction={'right'} />}
       />
       {pageNumbers}
-      <PaginationButton
+      <PageNavigationButton
         disabled={currentPage === totalPages}
         handlePaginationButtonClick={handleNextPage}
-        icon={''}
+        icon={<Arrow direction={'left'} />}
       />
       <RadixSelect onChange={handleItemsPerPageChange} value={itemsPerPage} />
     </div>

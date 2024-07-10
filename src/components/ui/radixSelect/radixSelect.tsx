@@ -1,11 +1,13 @@
-import { ChevronDownIcon } from '@radix-ui/react-icons'
+import Arrow from '@/icon/arrow/arrow'
 import * as Select from '@radix-ui/react-select'
+
+import s from './radixSelect.module.scss'
+
 type Props = {
   onChange: (value: number) => void
   value: number
 }
 
-import s from './radixSelect.module.scss'
 export const RadixSelect = ({ onChange, value = 10 }: Props) => {
   const stringValue = value.toString()
   const handleValueChange = (newValue: string) => {
@@ -21,7 +23,7 @@ export const RadixSelect = ({ onChange, value = 10 }: Props) => {
           {value}
         </Select.Value>
         <Select.Icon className={s.selectTrigerIcon}>
-          <ChevronDownIcon />
+          <Arrow direction={'down'} />
         </Select.Icon>
       </Select.Trigger>
       <Select.Portal>
