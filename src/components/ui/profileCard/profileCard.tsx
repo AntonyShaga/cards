@@ -4,21 +4,37 @@ import { CardStars } from '@/components/ui/cardStars'
 import { CardTitle } from '@/components/ui/cardTitle'
 import Arrow from '@/icon/arrow/arrow'
 
-import s from 'src/components/ui/cardTab/profileCard.module.scss'
-type Props = {
-  name: string
-}
-export const ProfileCard = ({ name }: Props) => {
+import s from './profileCard.module.scss'
+
+export const ProfileCard = () => {
   return (
     <div className={s.card}>
-      <CardTitle>{name}</CardTitle>
-      <CardTitle as={'div'}>{name}</CardTitle>
-      <CardIcon />
-      <CardStars />
-      <CardImg> {name}</CardImg>
-      <CardTitle fullWidth>
-        {name} {<Arrow direction={'up'} />}
-      </CardTitle>
+      <div>
+        <CardTitle fullWidth>Name</CardTitle>
+        <CardImg> Name</CardImg>
+      </div>
+      <div className={s.r}>
+        <CardTitle fullWidth>Name{<Arrow direction={'up'} />}</CardTitle>
+        <CardTitle as={'div'} fullWidth>
+          Name
+        </CardTitle>
+      </div>
+      <div className={s.r}>
+        <CardTitle fullWidth>Name</CardTitle>
+        <CardTitle as={'div'}>Name</CardTitle>
+      </div>
+      <div className={s.r}>
+        <CardTitle fullWidth>Name</CardTitle>
+        <CardTitle as={'div'}>Name</CardTitle>
+      </div>
+      <div className={s.r}>
+        <CardTitle fullWidth>Name</CardTitle>
+        <CardStars />
+      </div>
+      <div className={s.r}>
+        <CardTitle fullWidth>Name</CardTitle>
+        <CardIcon />
+      </div>
     </div>
   )
 }

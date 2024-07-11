@@ -2,13 +2,13 @@ import { ComponentPropsWithoutRef } from 'react'
 
 import { AvatarLogo } from '@/components/ui/avtar'
 import { Button } from '@/components/ui/button'
-import { NewModal } from '@/components/ui/newModal'
 import { Logo } from '@/icon/Logo'
 import { LogoOut } from '@/icon/logoOut/logoOut'
 import { Person } from '@/icon/person/person'
 
 import s from './header.module.scss'
 
+import { DropdownModal } from '../dropdownModal'
 import { TextIconWrapper } from '../textIconWrapper'
 
 export type HeaderProps = {
@@ -23,7 +23,7 @@ export const Header = ({ variant = 'headerLogo' }: HeaderProps) => {
           <Logo />
         </div>
         {variant === 'headerLogo' && (
-          <NewModal
+          <DropdownModal
             icon={
               <AvatarLogo
                 src={
@@ -44,7 +44,7 @@ export const Header = ({ variant = 'headerLogo' }: HeaderProps) => {
             }
             {<TextIconWrapper icon={<Person />} text={'My Profile'} />}
             {<TextIconWrapper icon={<LogoOut />} text={'Sign Out'} />}
-          </NewModal>
+          </DropdownModal>
         )}
 
         {variant === 'headerButtom' && (

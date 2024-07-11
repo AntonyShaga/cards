@@ -11,7 +11,7 @@ const meta = {
   },
   component: ProfileCard,
   tags: ['autodocs'],
-  title: 'Components/UI/CardTab',
+  title: 'Components/UI/CardTabFul',
 } satisfies Meta<typeof ProfileCard>
 
 export default meta

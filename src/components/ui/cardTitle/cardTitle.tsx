@@ -7,15 +7,14 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   fullWidth?: boolean
 } & ComponentPropsWithoutRef<T>
 export const CardTitle = <T extends ElementType = 'button'>(props: ButtonProps<T>) => {
-  const { as: Component = 'button', children, fullWidth } = props
+  const { as: Component = 'button', fullWidth, ...res } = props
 
   return (
     <Component
       className={`${Component === 'button' ? s.cardButton : s.cardTitle} ${
         fullWidth ? s.fullWidth : ''
       }`}
-    >
-      {children}
-    </Component>
+      {...res}
+    />
   )
 }

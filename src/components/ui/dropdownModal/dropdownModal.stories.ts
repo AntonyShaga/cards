@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NewModal } from './'
+import { DropdownModal } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +9,10 @@ const meta = {
       options: ['headerButtom', 'headerLogo'],
     },
   },
-  component: NewModal,
+  component: DropdownModal,
   tags: ['autodocs'],
   title: 'Components/UI/NewModal',
-} satisfies Meta<typeof NewModal>
+} satisfies Meta<typeof DropdownModal>
 
 export default meta
 type Story = StoryObj<typeof meta>

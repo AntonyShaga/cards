@@ -2,20 +2,20 @@ import { ReactNode, useState } from 'react'
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
-import s from './newModal.module.scss'
+import s from './dropdownModal.module.scss'
 
 type Props = {
   children: ReactNode[]
   icon: ReactNode
   name?: string
 }
-export const NewModal = ({ children, icon, name }: Props) => {
-  const [visibleName, setvisibleName] = useState(true)
+export const DropdownModal = ({ children, icon, name }: Props) => {
+  const [isNameVisible, setvisibleName] = useState<boolean>(true)
 
   return (
     <DropdownMenu.Root
       onOpenChange={() => {
-        setvisibleName(!visibleName)
+        setvisibleName(!isNameVisible)
       }}
     >
       <DropdownMenu.Trigger asChild className={s.DropdownMenuTriger}>
@@ -23,7 +23,7 @@ export const NewModal = ({ children, icon, name }: Props) => {
           <button className={s.DropdownMenuIconButton} type={'button'}>
             {icon}
           </button>
-          {visibleName && name && <div>{name}</div>}
+          {isNameVisible && name && <div>{name}</div>}
         </div>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
@@ -31,7 +31,7 @@ export const NewModal = ({ children, icon, name }: Props) => {
           {children.map((el, index) => {
             return (
               <DropdownMenu.Item
-                className={`${index !== children.length - 1 ? s.DropdownMenuItem : s.DropdownMenuItemLastChild}`}
+                className={`${s.DropdownMenuItem} ${index === children.length - 1 ? s.DropdownMenuItemLastChild : ''}`}
                 key={index}
               >
                 {el}
