@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { FontIcon } from './'
+import { TextIconWrapper } from './'
 
 const meta = {
-  component: FontIcon,
+  component: TextIconWrapper,
   tags: ['autodocs'],
   title: 'Components/UI/FontIcon',
-} satisfies Meta<typeof FontIcon>
+} satisfies Meta<typeof TextIconWrapper>
 
 export default meta
 type Story = StoryObj<typeof meta>

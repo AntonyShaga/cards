@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-import { usePageNumbers } from '@/components/ui/pagination/hook'
-import { PageNavigationButton } from '@/components/ui/pagination/pageNavigationButton'
+import { usePageNumbers } from '@/components/ui/dynamicPagination/hook'
+import { PageNavigationButton } from '@/components/ui/dynamicPagination/pageNavigationButton'
 import { RadixSelect } from '@/components/ui/radixSelect'
 import Arrow from '@/icon/arrow/arrow'
 
-import s from './pagination.module.scss'
+import s from './dynamicPagination.module.scss'
 
-export const DynamicPagination: React.FC = () => {
+export const DynamicPagination = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage, setItemsPerPage] = useState(100)
   const totalItems = 5500

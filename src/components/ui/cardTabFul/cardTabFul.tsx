@@ -3,7 +3,7 @@ import { CardIcon } from '@/components/ui/cardIcon'
 import { CardImg } from '@/components/ui/cardImg'
 import { CardStars } from '@/components/ui/cardStars'
 import { CardTitle } from '@/components/ui/cardTitle'
-import ArrowUp from '@/icon/arrowUp'
+import Arrow from '@/icon/arrow/arrow'
 
 import s from './cardTabFul.module.scss'
 
@@ -15,7 +15,7 @@ export const CardTabFul = () => {
         <CardImg> Name</CardImg>
       </div>
       <div className={s.r}>
-        <CardTitle fullWidth>Name{<ArrowUp />}</CardTitle>
+        <CardTitle fullWidth>Name{<Arrow direction={'up'} />}</CardTitle>
         <CardTitle as={'div'} fullWidth>
           Name
         </CardTitle>

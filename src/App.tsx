@@ -1,20 +1,20 @@
 import { Button } from '@/components/ui/button'
-import { CardTab } from '@/components/ui/cardTab'
 import { CardTabFul } from '@/components/ui/cardTabFul'
 import { CheckBox } from '@/components/ui/checkbox'
 import { DualThumbSlider } from '@/components/ui/dualThumbSlider'
-import { FontIcon } from '@/components/ui/fontIcon'
+import { DynamicPagination } from '@/components/ui/dynamicPagination'
 import { Header } from '@/components/ui/header'
 import { Input } from '@/components/ui/input'
 import { NewModal } from '@/components/ui/newModal'
-import { DynamicPagination } from '@/components/ui/pagination/dynamicPagination'
 import { RadioButton } from '@/components/ui/radioButton'
+import { TextIconWrapper } from '@/components/ui/textIconWrapper'
 import { Title } from '@/components/ui/title'
 import { Edit } from '@/icon/edit/edit'
 import Learn from '@/icon/learn/learn'
 import { LogoOut } from '@/icon/logoOut/logoOut'
 import { More } from '@/icon/more/more'
 import { Trash } from '@/icon/trash/trash'
+import { ProfileCard } from 'components/ui/profileCard'
 
 export function App() {
   return (
@@ -26,11 +26,11 @@ export function App() {
         {'Button primary'}
       </Button>
       <Title />
-      <CardTab />
+      <ProfileCard name={'Name'} />
       <NewModal icon={<More />}>
-        <FontIcon icon={<Learn />} text={'Learn'} />
-        <FontIcon icon={<Edit />} text={'Edit'} />
-        <FontIcon icon={<Trash />} text={'Delete'} />
+        <TextIconWrapper icon={<Learn />} text={'Learn'} />
+        <TextIconWrapper icon={<Edit />} text={'Edit'} />
+        <TextIconWrapper icon={<Trash />} text={'Delete'} />
       </NewModal>
       <CardTabFul />
 
