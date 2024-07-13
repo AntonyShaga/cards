@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux'
+
 import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/ui/checkbox'
 import { DetailCard } from '@/components/ui/detailCard'
@@ -15,29 +17,34 @@ import Learn from '@/icon/learn/learn'
 import { LogoOut } from '@/icon/logoOut/logoOut'
 import { More } from '@/icon/more/more'
 import { Trash } from '@/icon/trash/trash'
+import { DecksPage } from '@/pages/decks.page'
+import { store } from '@/services/store'
 
 export function App() {
   return (
-    <div>
-      <Header />
-      <Input disabled={false} value={''} variant={'search'} />
-      <Button>
-        {<LogoOut />}
-        {'Button primary'}
-      </Button>
-      <Title />
-      <DetailCard name={'Name'} />
-      <DropdownModal icon={<More />}>
-        <TextIconWrapper icon={<Learn />} text={'Learn'} />
-        <TextIconWrapper icon={<Edit />} text={'Edit'} />
-        <TextIconWrapper icon={<Trash />} text={'Delete'} />
-      </DropdownModal>
-      <ProfileCard />
+    <Provider store={store}>
+      <DecksPage />
+      <div>
+        <Header />
+        <Input disabled={false} value={''} variant={'search'} />
+        <Button>
+          {<LogoOut />}
+          {'Button primary'}
+        </Button>
+        <Title />
+        <DetailCard name={'Name'} />
+        <DropdownModal icon={<More />}>
+          <TextIconWrapper icon={<Learn />} text={'Learn'} />
+          <TextIconWrapper icon={<Edit />} text={'Edit'} />
+          <TextIconWrapper icon={<Trash />} text={'Delete'} />
+        </DropdownModal>
+        <ProfileCard />
 
-      <CheckBox />
-      <RadioButton />
-      <DualThumbSlider />
-      <DynamicPagination />
-    </div>
+        <CheckBox />
+        <RadioButton />
+        <DualThumbSlider />
+        <DynamicPagination />
+      </div>
+    </Provider>
   )
 }
