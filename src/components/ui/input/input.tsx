@@ -1,6 +1,5 @@
-import { ComponentPropsWithoutRef } from 'react'
+import { ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
-import { CloseOutline } from '@/icon/CloseOutline'
 import { EyeOutline } from '@/icon/EyeOutline'
 import { MaximizeOutline } from '@/icon/MaximizeOutline'
 
@@ -8,28 +7,52 @@ import s from './input.module.scss'
 
 export type InputProps = {
   className?: string
-  disabled: boolean
-  value: string
+  disabled?: boolean
+  inputType: string
+  label?: string
+
   variant?: 'eye' | 'regular' | 'search'
 } & ComponentPropsWithoutRef<'input'>
 
-export const Input = (props: InputProps) => {
-  const { className, disabled, value, variant = 'regular', ...rest } = props
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const {
+    className,
+    disabled,
+    inputType,
+    label,
+    onChange,
+    value,
+    variant = 'regular',
+    ...rest
+  } = props
+  // const [inputValue, setInputValue] = useState('')
+  const [showPassword, setShowPassword] = useState<'password' | 'text'>('password')
+  /*const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.currentTarget.value)
+  }*/
+
+  const handleIconClick = () => {
+    setShowPassword(showPassword === 'text' ? 'password' : 'text')
+  }
 
   return (
-    <div>
-      <div className={`${s.input__wrapper}`}>
+    <div className={s.inputContainer}>
+      {label && <span>{label}</span>}
+      <div className={`${s.inputWrapper}`}>
         {variant === 'search' && <MaximizeOutline />}
         <input
           className={s.input}
           disabled={disabled}
-          onChange={() => {}}
-          type={'text'}
+          onChange={onChange}
+          ref={ref}
+          type={inputType !== 'password' ? inputType : showPassword}
+          value={value}
           {...rest}
         />
-        {variant === 'eye' && <EyeOutline />}
-        {variant === 'search' && <CloseOutline />}
+        <div className={s.inputIcon} onClick={handleIconClick}>
+          {variant === 'eye' && <EyeOutline disabled={showPassword === 'password'} />}
+        </div>
       </div>
     </div>
   )
-}
+})

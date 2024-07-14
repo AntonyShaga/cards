@@ -9,12 +9,13 @@
 
   border-radius: 100%;
 
-  &:hover {
-    background-color: var(--color-dark-500);
+  &Conteiner {
+    display: flex;
+    align-items: center;
   }
 
-  &:active {
-    background-color: var(--color-dark-100);
+  &:hover {
+    background-color: var(--color-dark-500);
   }
 
   &:focus-within {
@@ -40,5 +41,11 @@
 
   &Indicator {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+      background-color: var(--color-dark-100);
+    }
   }
 }

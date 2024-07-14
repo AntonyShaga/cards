@@ -1,28 +1,9 @@
-import { Provider } from 'react-redux'
-
-import { Button } from '@/components/ui/button'
-import { CheckBox } from '@/components/ui/checkbox'
-import { DetailCard } from '@/components/ui/detailCard'
-import { DropdownModal } from '@/components/ui/dropdownModal'
-import { DualThumbSlider } from '@/components/ui/dualThumbSlider'
-import { DynamicPagination } from '@/components/ui/dynamicPagination'
-import { Header } from '@/components/ui/header'
-import { Input } from '@/components/ui/input'
-import { ProfileCard } from '@/components/ui/profileCard'
-import { RadioButton } from '@/components/ui/radioButton'
-import { TextIconWrapper } from '@/components/ui/textIconWrapper'
-import { Title } from '@/components/ui/title'
-import { Edit } from '@/icon/edit/edit'
-import Learn from '@/icon/learn/learn'
-import { LogoOut } from '@/icon/logoOut/logoOut'
-import { More } from '@/icon/more/more'
-import { Trash } from '@/icon/trash/trash'
-import { DecksPage } from '@/pages/decks.page'
-import { store } from '@/services/store'
+import { Router } from '@/router'
 
 export function App() {
   return (
-    <Provider store={store}>
+    <Router />
+    /* <Provider store={store}>
       <DecksPage />
       <div>
         <Header />
@@ -45,6 +26,6 @@ export function App() {
         <DualThumbSlider />
         <DynamicPagination />
       </div>
-    </Provider>
+    </Provider>*/
   )
 }
