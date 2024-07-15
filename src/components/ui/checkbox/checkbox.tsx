@@ -16,7 +16,7 @@ type Props = {
 }
 
 export const CheckBox = forwardRef<HTMLButtonElement, Props>((props, forwardedRef) => {
-  const { checked, disabled = false, id, label, onValueChange, required = true } = props
+  const { checked, disabled = false, id, label, onValueChange, required = false } = props
 
   return (
     <div className={s.checkboxConteiner}>

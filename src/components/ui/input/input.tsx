@@ -8,9 +8,10 @@ import s from './input.module.scss'
 export type InputProps = {
   className?: string
   disabled?: boolean
+  errorMessage?: string
   inputType: string
   label?: string
-
+  required?: boolean
   variant?: 'eye' | 'regular' | 'search'
 } & ComponentPropsWithoutRef<'input'>
 
@@ -18,18 +19,17 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const {
     className,
     disabled,
+    errorMessage,
     inputType,
     label,
     onChange,
+    required = false,
     value,
     variant = 'regular',
     ...rest
   } = props
-  // const [inputValue, setInputValue] = useState('')
+
   const [showPassword, setShowPassword] = useState<'password' | 'text'>('password')
-  /*const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.currentTarget.value)
-  }*/
 
   const handleIconClick = () => {
     setShowPassword(showPassword === 'text' ? 'password' : 'text')
@@ -45,6 +45,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
           disabled={disabled}
           onChange={onChange}
           ref={ref}
+          required={required}
           type={inputType !== 'password' ? inputType : showPassword}
           value={value}
           {...rest}
@@ -53,6 +54,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
           {variant === 'eye' && <EyeOutline disabled={showPassword === 'password'} />}
         </div>
       </div>
+      <div className={s.error}>{errorMessage}</div>
     </div>
   )
 })
