@@ -1,5 +1,6 @@
 import { useController, useForm } from 'react-hook-form'
 
+import { ControledChechBox } from '@/auth/controledChechBox/controledChechBox.tsx'
 import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/ui/checkbox/checkbox'
 import { Input } from '@/components/ui/input'
@@ -7,24 +8,28 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 
 import s from './sign-in.module.scss'
-type FormValues = {
-  email: string
-  password: string
-  rememberMe: boolean
-}
+
 export const SignIn = () => {
   const loginSchema = z.object({
     email: z.string().email(),
     password: z.string().min(4),
-    rememberMe: z.boolean().default(false),
+    rememberMe: z.boolean(),
   })
 
+  type FormValues = z.infer<typeof loginSchema>
   const {
     control,
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm<FormValues>({ resolver: zodResolver(loginSchema) })
+  } = useForm<FormValues>({
+    defaultValues: {
+      email: '',
+      password: '',
+      rememberMe: false,
+    },
+    resolver: zodResolver(loginSchema),
+  })
   const onSubmit = handleSubmit(data => {
     console.log(data)
   })
@@ -37,8 +42,6 @@ export const SignIn = () => {
     defaultValue: false,
     name: 'rememberMe',
   })
-  const emailRegex =
-    /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
 
   return (
     <div className={s.signUpContainer}>
@@ -69,6 +72,7 @@ export const SignIn = () => {
           </form>
         </div>
         <div>bla bla bla</div>
+        <ControledChechBox />
         <Button>Sign Up</Button>
       </div>
     </div>
