@@ -1,6 +1,7 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NewModal } from './'
+import { PageNavigationButton } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +10,10 @@ const meta = {
       options: ['headerButtom', 'headerLogo'],
     },
   },
-  component: NewModal,
+  component: PageNavigationButton,
   tags: ['autodocs'],
-  title: 'Components/UI/NewModal',
-} satisfies Meta<typeof NewModal>
+  title: 'Components/UI/PageNavigationButton',
+} satisfies Meta<typeof PageNavigationButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -30,3 +31,5 @@ export const HeaderLogo: Story = {
     variant: 'headerLogo',
   },
 }
+*/
+export default {}

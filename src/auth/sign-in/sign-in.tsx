@@ -1,10 +1,8 @@
-import { useController, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 import { ControledChechBox } from '@/auth/controledChechBox/controledChechBox'
 import { Button } from '@/components/ui/button'
-import { CheckBox } from '@/components/ui/checkbox/checkbox'
 import { Input } from '@/components/ui/input'
-import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from 'src/auth/sign-up/index.ts'
+import { SignIn } from '@/auth/sign-in/sign-in'
 
 const meta = {
   argTypes: {
@@ -9,10 +9,10 @@ const meta = {
       options: ['primary', 'secondary'],
     },
   },
-  component: Button,
+  component: SignIn,
   tags: ['autodocs'],
-  title: 'Components/UI/Button',
-} satisfies Meta<typeof Button>
+  title: 'src/auth/SignIn',
+} satisfies Meta<typeof SignIn>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -22,25 +22,6 @@ export const Primary: Story = {
     as: 'button',
     children: 'Primary Input',
     disabled: false,
-    variant: 'primary',
-  },
-}
-
-export const Secondary: Story = {
-  args: {
-    as: 'button',
-    children: 'Secondary Input',
-    disabled: false,
-    variant: 'secondary',
-  },
-}
-
-export const FullWidth: Story = {
-  args: {
-    as: 'button',
-    children: 'Full Width Primary Input',
-    disabled: false,
-    fullWidth: true,
     variant: 'primary',
   },
 }

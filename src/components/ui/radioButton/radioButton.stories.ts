@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NewModal } from './'
+import { RadioButton } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +9,10 @@ const meta = {
       options: ['headerButtom', 'headerLogo'],
     },
   },
-  component: NewModal,
+  component: RadioButton,
   tags: ['autodocs'],
-  title: 'Components/UI/NewModal',
-} satisfies Meta<typeof NewModal>
+  title: 'Components/UI/RadioButton',
+} satisfies Meta<typeof RadioButton>
 
 export default meta
 type Story = StoryObj<typeof meta>

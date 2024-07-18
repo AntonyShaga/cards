@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NewModal } from './'
+import { DynamicPagination } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +9,10 @@ const meta = {
       options: ['headerButtom', 'headerLogo'],
     },
   },
-  component: NewModal,
+  component: DynamicPagination,
   tags: ['autodocs'],
-  title: 'Components/UI/NewModal',
-} satisfies Meta<typeof NewModal>
+  title: 'Components/UI/DynamicPagination',
+} satisfies Meta<typeof DynamicPagination>
 
 export default meta
 type Story = StoryObj<typeof meta>

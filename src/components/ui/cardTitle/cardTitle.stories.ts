@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { CardTitle } from './'
+import { CardTitle } from '@/components/ui/cardTitle/cardTitle'
 
 const meta = {
   argTypes: {
@@ -17,15 +17,9 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const CardButton: Story = {
+export const CasrdButton: Story = {
   args: {
     as: 'button',
-    children: 'Name',
-  },
-}
-export const CardTitleStory: Story = {
-  args: {
-    as: 'div',
     children: 'Name',
   },
 }
