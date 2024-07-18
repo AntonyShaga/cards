@@ -1,8 +1,14 @@
+import { Provider } from 'react-redux'
+
 import { Router } from '@/router'
+import { store } from '@/services/store'
 
 export function App() {
   return (
-    <Router />
+    <Provider store={store}>
+      <Router />
+    </Provider>
+
     /* <Provider store={store}>
       <DecksPage />
       <div>
