@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { CardIcon } from './'
@@ -25,3 +26,5 @@ export const Primary: Story = {
     variant: 'primary',
   },
 }
+*/
+export default {}

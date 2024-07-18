@@ -1,6 +1,7 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { CardTitle } from './'
+import { CheckBox } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +10,10 @@ const meta = {
       options: ['primary', 'secondary'],
     },
   },
-  component: CardTitle,
+  component: CheckBox,
   tags: ['autodocs'],
-  title: 'Components/UI/CardTitle',
-} satisfies Meta<typeof CardTitle>
+  title: 'Components/UI/CheckBox',
+} satisfies Meta<typeof CheckBox>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -29,3 +30,5 @@ export const CardTitleStory: Story = {
     children: 'Name',
   },
 }
+*/
+export default {}

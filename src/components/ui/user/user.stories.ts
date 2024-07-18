@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { User } from './'
@@ -22,3 +23,5 @@ export const UserStory: Story = {
     som: '',
   },
 }
+*/
+export default {}

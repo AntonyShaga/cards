@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Input } from './'
@@ -40,3 +41,5 @@ export const InputSearch: Story = {
     variant: 'search',
   },
 }
+*/
+export default {}

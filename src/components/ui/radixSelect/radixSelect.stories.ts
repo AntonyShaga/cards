@@ -1,6 +1,7 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NewModal } from './'
+import { RadixSelect } from './'
 
 const meta = {
   argTypes: {
@@ -9,10 +10,10 @@ const meta = {
       options: ['headerButtom', 'headerLogo'],
     },
   },
-  component: NewModal,
+  component: RadixSelect,
   tags: ['autodocs'],
-  title: 'Components/UI/NewModal',
-} satisfies Meta<typeof NewModal>
+  title: 'Components/UI/RadixSelect',
+} satisfies Meta<typeof RadixSelect>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -30,3 +31,5 @@ export const HeaderLogo: Story = {
     variant: 'headerLogo',
   },
 }
+*/
+export default {}

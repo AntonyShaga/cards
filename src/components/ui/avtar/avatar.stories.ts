@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { AvatarLogo } from './'
@@ -11,7 +12,7 @@ const meta = {
   },
   component: AvatarLogo,
   tags: ['autodocs'],
-  title: 'Components/UI/AvatarLogo',
+  title: 'Components/UI/Avatar',
 } satisfies Meta<typeof AvatarLogo>
 
 export default meta
@@ -44,3 +45,5 @@ export const FullWidth: Story = {
     variant: 'primary',
   },
 }
+*/
+export default {}

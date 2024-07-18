@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { DetailCard } from './'
@@ -11,7 +12,7 @@ const meta = {
   },
   component: DetailCard,
   tags: ['autodocs'],
-  title: 'Components/UI/CardTab',
+  title: 'Components/UI/DetailCard',
 } satisfies Meta<typeof DetailCard>
 
 export default meta
@@ -25,3 +26,5 @@ export const Primary: Story = {
     variant: 'primary',
   },
 }
+*/
+export default {}
