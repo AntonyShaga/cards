@@ -1,9 +1,10 @@
 import { useController, useForm } from 'react-hook-form'
 
-import { ControledChechBox } from '@/auth/controledChechBox/controledChechBox.tsx'
+import { ControledChechBox } from '@/auth/controledChechBox/controledChechBox'
 import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/ui/checkbox/checkbox'
 import { Input } from '@/components/ui/input'
+import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 
@@ -35,13 +36,13 @@ export const SignIn = () => {
   })
 
   console.log('errors: ', errors)
-  const {
+  /*const {
     field: { onChange, value },
   } = useController({
     control,
     defaultValue: false,
     name: 'rememberMe',
-  })
+  })*/
 
   return (
     <div className={s.signUpContainer}>
@@ -62,17 +63,11 @@ export const SignIn = () => {
               variant={'eye'}
               {...register('password')}
             />
-            <CheckBox
-              onValueChange={onChange}
-              {...register('rememberMe')}
-              checked={value}
-              label={'Remember Me'}
-            />
+            <ControledChechBox control={control} label={'Remember me'} name={'rememberMe'} />
             <Button fullWidth>Sign In</Button>
           </form>
         </div>
         <div>bla bla bla</div>
-        <ControledChechBox />
         <Button>Sign Up</Button>
       </div>
     </div>
