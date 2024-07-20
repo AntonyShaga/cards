@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import { Input } from '@/components/ui/input'
 import {
+  Table,
   TableBody,
   TableCell,
   TableHead,
@@ -13,7 +14,6 @@ import {
   useGetDeckByIdQuery,
   useGetDecksQuery,
 } from '@/services/flashcards-api'
-import { Table } from '@radix-ui/themes'
 
 export function DecksPage() {
   const [search, setSearch] = useState('')

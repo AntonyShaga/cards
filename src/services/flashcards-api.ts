@@ -3,7 +3,7 @@ import {
   DecksListResponse,
   GetDeckByIdArgs,
   GetDecksArgs,
-} from '@/services/decks/decks.types'
+} from '@/services/desks/desks.types'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const flashcardsApi = createApi({
