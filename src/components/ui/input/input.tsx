@@ -9,7 +9,7 @@ export type InputProps = {
   className?: string
   disabled?: boolean
   errorMessage?: string
-  inputType: string
+  inputType?: string
   label?: string
   required?: boolean
   variant?: 'eye' | 'regular' | 'search'
